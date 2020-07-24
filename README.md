@@ -57,3 +57,5 @@ let data = {
 Devuelve el dato que le pasaste en forma de String
 let prueba = 3
 typeof data devuelve `object`
+
+#Clase 2  Como funciona JavaScript?
