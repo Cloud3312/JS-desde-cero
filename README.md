@@ -19,10 +19,9 @@ Es un valor constante, es decir que no puede variar, se define con const + nombr
 Para comentar utilizar // o /* */ , son utilizados para indicar que sucede en el programa UTILIZARLO ADECUADAMENTE SIN EXAGERAR.Tambien sirve para comentar codigo, es decir dejarlo sin utilizar.
 
 ## Tipos de Datos 
-### Primitivos
-#### Numeros
+### Numeros
 Son numeros: 1,70,600, 6.6,etc
-#### String
+### String
 Son definidos con `Comillas simples al reves o backtips`, "Comillas dobles" , 'Comillas simples'.Es preferible utilizar con backtips ya que nos permiten hacer mas cosas 
 como por ejemplo: concatenar 
 
@@ -34,18 +33,18 @@ Denotan un valor de verdad
 5 == `5` daria verdadero/true ya que JS asi
 7 == 8 daria falso/false 
 
-#### Undefined 
+### Undefined 
 Es cuando la variable no tiene ningun valor asignado o definido
 
-#### Null
+### Null
 Es cuando la variable nunca fue creada 
 
-#### Symbol()
+### Symbol()
 
-#### Arrays 
+### Arrays 
 Guardan mas de un valor por ejemplo let numbers = [1,2,5,6.7] son datos del mismo tipo
 
-#### Object 
+### Object 
 Es un tipo de dato que posee varios datos ya sea del mismo o diferente tipo
 let data = {
     nombre: `Juan`,
@@ -53,7 +52,7 @@ let data = {
     Edad: 21
 }
 
-#### typeof 
+### typeof 
 Devuelve el dato que le pasaste en forma de String
 let prueba = 3
 typeof data devuelve `object`
