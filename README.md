@@ -64,7 +64,7 @@ let data = {
 JS  es dinamnicamente tipado, es decir que el interprete deduce que es cada dato.Ademas de que las variables se pueden reedefinir(reasignar,pasarle un nuevo valor)
 
 ## Type coertion 
-Es poder concatenar cosas 
+Es poder concatenar cosas, es la conversión automática o implicita de valores de un tipo de dato a otro (Ejemplo: de cadena de texto a número) 
 true + 1 = 2  porque se considera a true como un 1 y a false como un 0
 `Hola Mundo ` + 1 = `Hola Mundo 1`
 Pero si se utiliza la multiplicacion daria NaN not a number
@@ -117,3 +117,23 @@ expresionQueDevuelveBoolean
 && evalua el primer valor, si es falso te da el primero, si es verdadero te da el segundo
 
 ### Numeros
+#### toFixed()
+devuelve el numero con la cantidad de decimales redondeados que vos quieras 
+let number = 5.966
+number.toFixed(2) devuelve 5.97
+
+#### parseInt(string, 10) y parseFloat(string, 10)
+parseInt convierte un numero que esta en forma de string a un numero entero
+parseFloat convierte un numero que esta en forma de string a un numero decimal
+
+### Math
+#### .floor()
+Se le pasa un numero y redondea para abajo
+#### .ceil()
+Se le pasa un numero y redondea para arriba
+
+#### .round()
+Se le pasa un numero y redondea dependiendo de si es mayor a 5 para arriba y si es menor a 5 para abajo
+#### .random()
+Devuelve un numero random
+Devuelve un numero random
