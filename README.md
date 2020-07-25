@@ -129,11 +129,65 @@ parseFloat convierte un numero que esta en forma de string a un numero decimal
 ### Math
 #### .floor()
 Se le pasa un numero y redondea para abajo
+Math.floor(20.6) //devuelve 20
 #### .ceil()
 Se le pasa un numero y redondea para arriba
-
+Math.ceil(20.4) //devuelve 21
 #### .round()
 Se le pasa un numero y redondea dependiendo de si es mayor a 5 para arriba y si es menor a 5 para abajo
 #### .random()
 Devuelve un numero random
-Devuelve un numero random
+
+Para hacer un sorteo se podria hacer Math.ceil(Math.random()*20) y devuelve un numero random entero de entre 0 y 20
+
+## Strings
+### Propiedades
+Una **Propiedad** es un valor que tiene un dato.Por ejemplo: caracteristicas como edad, pais,direccion
+
+#### .lenght
+Devuelve la cantidad de caracteres que tiene un String
+`Hola`.lenght devuelve 4
+
+### Metodos 
+Un **Metodo** es una operacion que el dato puede realizar, por ejemplo: acciones como trabajar,programar, disenar.
+Existen metodos sin parametros como:
+#### .trim()
+Lo que hace es sacarle los espacios en blanco del inicio y final del String, **NO LOS ESPACIOS QUE ESTAN ENTRE MEDIO**
+`   Hola    `.trim() devuele `Hola`
+#### .toUpperCase()
+Transforma el string que le pasemos a mayusculas
+`hola`.toUpperCase() devuelve `HOLA`
+
+#### .toLoweCase 
+Transforma el string que le pasemos a minusculas
+`HOLA`.toLoweCase() devuelve `hola`
+
+Estos pueden ser utilizados por ejemplo, para hacer un cuestionario
+
+let answer = prompt(`Cual es la capital de Argentina?`).trim().toUpperCase()   // Abre una ventana en el navegador con esa pregunta
+let message =  answer === `ARGENTINA` 
+               ? `Excelente, acertaste`                                        
+               : `Respuesta incorrecta`
+alert(message)
+
+Se pueden encontrar caracteres con:
+
+#### .indexOf()
+Indica la posicion del elemento a buscar dentro del String
+`Hola como estas`.indexOf(`o`) devuelve 1, ya que comienza a buscar en la posicion 0 del String, -1 si no lo encuentra
+
+#### .lastIndexOf()
+Indica la posicion ultima de lo que queremos a buscar 
+`Hola amigos`.lastIndexOf(`o`) devuelve 9
+
+#### .includes()
+Indica si el String dado incluye lo que se le haya pasado como parametro
+`https://ed.team/blog`.includes(`blog`) denota True
+
+#### .startsWith()
+Indica si el String dado comienza con lo que se le pasa como parametro
+`https://ed.team/blog`.startsWith(`https://ed.team`)     // Denota True
+
+#### endsWith()
+Indica si el String dado termina con lo que se le pasa como parametro
+`https://ed.team/blog`.endsWith(`blog`)                 //Denota True
