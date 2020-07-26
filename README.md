@@ -191,3 +191,25 @@ Indica si el String dado comienza con lo que se le pasa como parametro
 #### endsWith()
 Indica si el String dado termina con lo que se le pasa como parametro
 `https://ed.team/blog`.endsWith(`blog`)                 //Denota True
+
+### Manipular strings con metodos 
+#### .replace()
+`Hola mundo`.replace(`mundo`, `Miguel`)      //Esto devuelve `Hola Miguel`
+
+#### .split(separator,[cuantity])
+Separa el string dado en partes.Tambien se puede pasar un string vacio como parametro y va a separalo en letras
+`Alexys`.split(`e`)                         // Devuelve (2) ["Al", "xys"]
+
+#### .substring(start,[end])
+Extra el texto dependiendo de la posicion que le pasemos.Si se le pasa un numero negativo en [end] extrae hacia atras
+`Hola mundo`.substring(2)    //Devuelve `la mundo`
+`Hola mundo`substring(2,-1)   //Devuelve `Ho`
+#### .substr(start,[end])
+Comienza desde start, y termina en end, el start es la posicion y el end es la cantidad de caracteres a extraer.Si se le da un numero negativo extra desde el final
+`Hola mundo`.substring(2,5)    //Devuelve `la mu`
+
+#### .slice(start,[end])
+Es lo mismo que substring, solo que se diferencia en valores negativos
+
+
+## Clase 3 condicionales y ciclos
