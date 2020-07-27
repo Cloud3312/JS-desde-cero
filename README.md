@@ -213,3 +213,22 @@ Es lo mismo que substring, solo que se diferencia en valores negativos
 
 
 ## Clase 3 condicionales y ciclos
+### if
+#### Una linea
+if (condicion) // Hacer algo
+
+#### Con bloque
+if(condicion){
+    ...
+}
+
+#### Con mas de una condicion
+if(condicion1){
+  ...
+} else if(condicion2){
+  ...
+}
+  else(condicion3){
+  ...
+}
+    
