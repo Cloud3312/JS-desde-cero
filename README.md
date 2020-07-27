@@ -268,3 +268,7 @@ else{
 - Numero diferente de cero
 - Arrays 
 - Objetos
+
+### switch
+Cuando queremos comparar un valor con una serie de valores
+
