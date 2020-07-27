@@ -223,6 +223,7 @@ if(condicion){
 }
 
 #### Con mas de una condicion
+```
 if(condicion1){
   ...
 } else if(condicion2){
@@ -231,4 +232,5 @@ if(condicion1){
   else(condicion3){
   ...
 }
+```
     
