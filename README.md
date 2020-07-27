@@ -233,4 +233,38 @@ if(condicion1){
   ...
 }
 ```
-    
+### Condiciones multiples    
+#### && (and)
+Requiere que ambas condiciones den True
+
+#### || (or)
+Requiere que al menos una de True
+
+#### Pequeno ejercicio
+```
+let age = parseInt(prompt(`dame tu edad`,10))
+if(age){
+    if(age > 18){
+        alert(`Sos mayor de edad`)
+    }
+    else{
+        alert(`Sos menor de edad, te faltan ` + (18-age) + ` anios` )
+    }  
+}
+else{
+    age = parseInt(prompt(`Tu edad debe ser un numero`,10))
+}
+```
+### Truthy and falsy values
+#### Valores que te dan False en la condicion
+- 0
+- ""
+- NaN
+- undefined
+- null
+
+#### Valores que te dan True en la condicion
+- String no vacio
+- Numero diferente de cero
+- Arrays 
+- Objetos
