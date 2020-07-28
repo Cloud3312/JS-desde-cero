@@ -270,5 +270,74 @@ else{
 - Objetos
 
 ### switch
-Cuando queremos comparar un valor con una serie de valores
+```
+Cuando queremos comparar un valor con una serie de valores.Los ; son opcionales
+let valorAComparar = prompt(`Introduce un numero entre 1 y 3 `).toUpperCase().trim()
+//trim evita los espacios, y toUpperCase pone todo en mayusculas, esto es para evitar errores
+switch (valorAComparar){
+    case `1`:
+        alert(`Sos gracioso`)
+        break;
+    case `2`:
+        alert(`Sos extrovertido`)
+        break;
+    case `3`:
+        alert(`Sos feliz`)
+        break;    
+    default
+        alert(`Por favor elige un numero del 1 al 3`)
+        break;
+}
+```
+### Ciclos
+#### Ciclo for 
+Se declara una variable, mientras la condicion se cumple y luego un incremento
+```
+for(let i = 0; i <=100; i++){
+    if(i % 5 === 0)console.log(i)
+}
+// Imprime todos los numeros que sean divisibles por 5, empieza preguntando por 0
+// y en cada iteracion va aumentando en 1 gracias a i++
+// en vez de aumentar uno en uno se puede hacer += n  numeros
+```
+##### break y continue 
+continue evitara esa iteracion, y break detendra el ciclo completo
 
+Con **continue** se evita la iteracion, en este caso se evita el multiplo de 5, aunque tambien se puede hacer
+i % 5 !== 0 que va a dar como resultado lo mismo
+```
+for (let i = 0; i <= 50; i++){
+    if(i % 5 === 0) continue
+    console.log(i)         
+}
+// esta funcion devuelve los numeros entre 0 y 50 que no son multiplo de 5 
+```
+
+En este caso se utiliza **break** para detener la iteracion cuando n valga 5, esto devuelve los 5 primeros multiplos de 5
+```
+let n = 0
+for (let i = 1; i <= 50; i++){
+    if(i % 5 === 0){
+        console.log(i)
+        n++
+    }
+    if(n >= 5) break    
+}
+```
+
+#### Ciclo while 
+Mientras la condicion que este en el while se cumpla se ejecuta el codigo
+let i = 0 
+while(condicion){           //Condicion puede ser i<=10 para que siga el ciclo hasta que i valga 10
+    console.log(i)
+    i++
+}
+
+#### Ciclo do while
+Primero realiza la accion, luego pregunta la condicion
+``` 
+let password = "Capoeira"
+let pass
+do {
+    pass = prompt("Ingrese su contrasena")
+} while(pass !== password)
