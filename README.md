@@ -2,8 +2,9 @@
 # 1 Clase 1 Introduccion a JavaScript
 ## 1.1 Variables
 
-Las variables son definidas con: let + nombreDeLaVariable = valorADefinir(pueden ser un String,Boolean,Numero).
-Es buena practica tener los nombreDeLaVariable en ingles.
+Las variables son definidas con:   
+let + nombreDeLaVariable = valorADefinir(pueden ser un String,Boolean,Numero).
+Es buena practica tener los nombreDeLaVariable en ingles.  
 Ademas, en vez de escribir let en cada variable, se puede separar por comas, para ahorrar un poco de codigo.Los valores de las variables se pueden reasignar
 Ej:
 
@@ -12,10 +13,12 @@ let number = 10,
     nombre = `Braian`,
     pais   = `Argentina`
 ```
-Para ver lo que devuelve la variable, se puede utilizar la consola a traves de console.log(nombreDeLaVariable).
+Para ver lo que devuelve la variable, se puede utilizar la consola a traves de  
+console.log(nombreDeLaVariable).
 
 ## 1.2 Constantes
-Es un valor constante, es decir que no puede variar, se define con const + nombreDeLaConstante = valorADefinir 
+Es un valor constante, es decir que no puede variar, se define con  
+const + nombreDeLaConstante = valorADefinir 
 
 ## 1.3 Sintaxis: 
 Para comentar utilizar // o /* */ , son utilizados para indicar que sucede en el programa UTILIZARLO ADECUADAMENTE SIN EXAGERAR.Tambien sirve para comentar codigo, es decir dejarlo sin utilizar.
@@ -25,16 +28,15 @@ Para comentar utilizar // o /* */ , son utilizados para indicar que sucede en el
 ### 1.4.2 Numeros
 Son numeros: 1,70,600, 6.6,etc
 ### 1.4.3 String
-Son definidos con `Comillas simples al reves o backtips`, "Comillas dobles" , 'Comillas simples'.Es preferible utilizar con backtips ya que nos permiten hacer mas cosas 
-como por ejemplo: concatenar 
+Son definidos con  ``` `Comillas simples al reves o backtips` ``` , "Comillas dobles" , 'Comillas simples'.Es preferible utilizar con backtips ya que nos permiten hacer mas cosas como por ejemplo: concatenar   
 
-let nombre = `Juan tiene ${number} a;os` 
+``` let nombre = `Juan tiene ${number} anos` ```
 
 ### 1.4.4 Boolean 
-Denotan un valor de verdad   
-5 == 5 daria verdadero/true  
-5 == `5` daria verdadero/true ya que JS asi  
-7 == 8 daria falso/false   
+Denotan un valor de verdad     
+5 == 5 daria verdadero/true    
+5 == `5` daria verdadero/true ya que JS asi    
+7 == 8 daria falso/false     
 
 ### 1.4.5 Undefined 
 Es cuando la variable no tiene ningun valor asignado o definido
@@ -45,22 +47,23 @@ Es cuando la variable nunca fue creada
 ### 1.4.7 Symbol()
 
 ### 1.4.8 typeof 
-Devuelve el dato que le pasaste en forma de String
-let prueba = 3
+Devuelve el dato que le pasaste en forma de String  
+``` let prueba = 3  ```
 typeof data devuelve `object`
 
 ## 1.4.9 Compuestos 
 ### 1.4.10 Arrays 
-Guardan mas de un valor por ejemplo let numbers = [1,2,5,6.7] son datos del mismo tipo
+Guardan mas de un valor por ejemplo ``` let numbers = [1,2,5,6.7] ``` son datos del mismo tipo
 
 ### 1.4.11 Object 
 Es un tipo de dato que posee varios datos ya sea del mismo o diferente tipo
+```
 let data = {
     nombre: `Juan`,
     apellido: `Perez`,
     Edad: 21
 }
-
+```
 
 # 2 Clase 2  Como funciona JavaScript?
 JS  es dinamnicamente tipado, es decir que el interprete deduce que es cada dato.Ademas de que las variables se pueden reedefinir(reasignar,pasarle un nuevo valor)
@@ -68,23 +71,24 @@ JS  es dinamnicamente tipado, es decir que el interprete deduce que es cada dato
 ## 2.1 Type coertion 
 Es poder concatenar cosas, es la conversión automática o implicita de valores de un tipo de dato a otro (Ejemplo: de cadena de texto a número) 
 true + 1 = 2  porque se considera a true como un 1 y a false como un 0
-`Hola Mundo ` + 1 = `Hola Mundo 1`
+``` `Hola Mundo ` + 1 = `Hola Mundo 1` ```  
 Pero si se utiliza la multiplicacion daria NaN not a number
 
 ## 2.2 Valor o referencia
 Al usar un dato se lo puede usar por valor(number, boolean, String) o referencia(objeto y arrays)
-A los que son por valor se lo puede modificar, mientras que los de referencia no, permanecen igual
+A los que son por valor se los puede modificar, mientras que los de referencia no, es decir, permanecen igual
 Ej:
+``` 
 let number  = 60    
 let number2 = number  
 number2 = 70  <- al ser un Number y estar pasado por valor number 1 no cambia
-Mientras que al  ser referencia cambian ambos valores
+// Mientras que al  ser referencia cambian ambos valores
 let number  = [1,3,4,5]    
 let number2 = number
-number2.push(6)
+number2.push(6)             //.push anade un elemento al array 
 number  = [1,3,4,5,6]
 number2 = [1,3,4,5,6]
-
+``` 
 ## 2.3 Operadores 
 ### 2.3.1 Asignacion 
 Le asignan el valor a una variable
@@ -92,12 +96,12 @@ Le asignan el valor a una variable
 
 ### 2.3.2 Comparacion (Binarios)
 Comparan valores , devuelven un Boolean
-==, ===, !=, !==, >, <, >=, <= 
-5 == `5` devuelve True
-5 === `5` devuelve False, ya que === se enfoca en el tipo de valor y dato 
-Es conveniente evitar la doble igualdad ya que puede generar problemas
-5 != `5` devuelve False ya que al ser un solo igual se centra solo en el valor, el != es distinto de 
-5 !== `5` devuelve True ya que sucede lo mismo que el punto del triple igual
+==, ===, !=, !==, >, <, >=, <=   
+5 == `5` devuelve True  
+5 === `5` devuelve False, ya que === se enfoca en el tipo de valor y dato   
+Es conveniente evitar la doble igualdad ya que puede generar problemas  
+5 != `5` devuelve False ya que al ser un solo igual se centra solo en el valor, el != es distinto de  
+5 !== `5` devuelve True ya que sucede lo mismo que el punto del triple igual  
 
 ### 2.3.3 Unarios 
 typeof, ! (negacion)
@@ -129,18 +133,18 @@ parseInt convierte un numero que esta en forma de string a un numero entero
 parseFloat convierte un numero que esta en forma de string a un numero decimal
 
 ### 2.3.8 Math
-#### 2.3.8.9 .floor()
-Se le pasa un numero y redondea para abajo
+#### 2.3.8.1 .floor()
+Se le pasa un numero y redondea para abajo    
 Math.floor(20.6) //devuelve 20
-#### 2.3.8.10 .ceil()
-Se le pasa un numero y redondea para arriba
+#### 2.3.8.2 .ceil()
+Se le pasa un numero y redondea para arriba  
 Math.ceil(20.4) //devuelve 21
-#### 2.3.8.11 .round()
+#### 2.3.8.3 .round()
 Se le pasa un numero y redondea dependiendo de si es mayor a 5 para arriba y si es menor a 5 para abajo
-#### 2.3.8.12 .random()
-Devuelve un numero random
-
-Para hacer un sorteo se podria hacer Math.ceil(Math.random()*20) y devuelve un numero random entero de entre 0 y 20
+#### 2.3.8.4 .random()
+Devuelve un numero random  
+Para hacer un sorteo se podria hacer   
+Math.ceil(Math.random()*20)  //devuelve un numero random entero de entre 0 y 20
 
 ## 2.4 Strings
 ### 2.4.1 Propiedades
