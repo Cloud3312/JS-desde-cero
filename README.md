@@ -114,23 +114,26 @@ typeof, ! (negacion)
 
 ### 2.3.5 Operador Ternario (3 Valores)
 Funciona como un condicional, utiliza ? para que haga algo primero y si eso no se cumple hace lo que esta al lado de :
-expresionQueDevuelveBoolean
-? valorSiEsTrue
-: valorSiEsFalse
+```
+expresionQueDevuelveBoolean  
+? valorSiEsTrue  
+: valorSiEsFalse  
+```
 
 ### 2.3.6 Operador Corto circuito
-|| evalua el primer valor, si es verdadero te da el primero y si es falso te da el segundo
-&& evalua el primer valor, si es falso te da el primero, si es verdadero te da el segundo
+|| evalua el primer valor, si es verdadero te da el primero y si es falso te da el segundo  
+&& evalua el primer valor, si es falso te da el primero, si es verdadero te da el segundo  
 
 ### 2.3.7 Numeros
 #### 2.3.7.1 toFixed()
-devuelve el numero con la cantidad de decimales redondeados que vos quieras 
+devuelve el numero con la cantidad de decimales redondeados que vos quieras   
+```
 let number = 5.966
-number.toFixed(2) devuelve 5.97
-
+number.toFixed(2)  //devuelve 5.97
+``` 
 #### 2.3.7.2 parseInt(string, 10) y parseFloat(string, 10)
-parseInt convierte un numero que esta en forma de string a un numero entero
-parseFloat convierte un numero que esta en forma de string a un numero decimal
+parseInt convierte un numero que esta en forma de string a un numero entero  
+parseFloat convierte un numero que esta en forma de string a un numero decimal  
 
 ### 2.3.8 Math
 #### 2.3.8.1 .floor()
@@ -161,17 +164,17 @@ Existen metodos sin parametros como:
 #### 2.4.2.1 .trim()
 Lo que hace es sacarle los espacios en blanco del inicio y final del String, **NO LOS ESPACIOS QUE ESTAN ENTRE MEDIO**  
 ```
-`   Hola    `.trim() devuele `Hola`
+`   Hola    `.trim() //devuelve `Hola`
 ```
 #### 2.4.2.2 .toUpperCase()
 Transforma el string que le pasemos a mayusculas  
 ```
-`hola`.toUpperCase() devuelve `HOLA`
+`hola`.toUpperCase() //devuelve `HOLA`
 ```
 #### 2.4.2.3 .toLoweCase 
 Transforma el string que le pasemos a minusculas    
 ```
-`HOLA`.toLoweCase() devuelve `hola`
+`HOLA`.toLoweCase() //devuelve `hola`
 ```
 Estos pueden ser utilizados por ejemplo, para hacer un cuestionario  
 ```
@@ -186,55 +189,67 @@ Se pueden encontrar caracteres con:
 
 #### 2.4.2.4 .indexOf()
 Indica la posicion del elemento a buscar dentro del String
-`Hola como estas`.indexOf(`o`) devuelve 1, ya que comienza a buscar en la posicion 0 del String, -1 si no lo encuentra
-
+```
+`Hola como estas`.indexOf(`o`) //devuelve 1, ya que comienza a buscar en la posicion 0 del String, -1 si no lo encuentra
+```
 #### 2.4.2.5 .lastIndexOf()
 Indica la posicion ultima de lo que queremos a buscar 
+```
 `Hola amigos`.lastIndexOf(`o`) devuelve 9
-
+```
 #### 2.4.2.6 .includes()
 Indica si el String dado incluye lo que se le haya pasado como parametro
-`https://ed.team/blog`.includes(`blog`) denota True
-
+```
+`https://ed.team/blog`.includes(`blog`)     //denota True
+```
 #### 2.4.2.7 .startsWith()
 Indica si el String dado comienza con lo que se le pasa como parametro
+```
 `https://ed.team/blog`.startsWith(`https://ed.team`)     // Denota True
-
+```
 #### 2.4.2.8 endsWith()
 Indica si el String dado termina con lo que se le pasa como parametro
+```
 `https://ed.team/blog`.endsWith(`blog`)                 //Denota True
-
+```
 ### 2.4.3 Manipular strings con metodos 
 #### 2.4.3.1 .replace()
+```
 `Hola mundo`.replace(`mundo`, `Miguel`)      //Esto devuelve `Hola Miguel`
-
+```
 #### 2.4.3.2 .split(separator,[cuantity])
 Separa el string dado en partes.Tambien se puede pasar un string vacio como parametro y va a separalo en letras
+```
 `Alexys`.split(`e`)                         // Devuelve (2) ["Al", "xys"]
+```
 
 #### 2.4.3.3 .substring(start,[end])
 Extra el texto dependiendo de la posicion que le pasemos.Si se le pasa un numero negativo en [end] extrae hacia atras
+```
 `Hola mundo`.substring(2)    //Devuelve `la mundo`
 `Hola mundo`substring(2,-1)   //Devuelve `Ho`
+```
 #### 2.4.3.4 .substr(start,[end])
 Comienza desde start, y termina en end, el start es la posicion y el end es la cantidad de caracteres a extraer.Si se le da un numero negativo extra desde el final
+```
 `Hola mundo`.substring(2,5)    //Devuelve `la mu`
-
+```
 #### 2.4.3.5 .slice(start,[end])
 Es lo mismo que substring, solo que se diferencia en valores negativos
-
 
 # 3 Clase 3 condicionales y ciclos
 ## 3.1 if
 ### 3.1.1 Una linea
+```
 if (condicion) // Hacer algo
-
+```
 ### 3.1.2 Con bloque
+```
 if(condicion){
     ...
 }
-
-### 3.1.2 Con mas de una condicion
+```
+### 3.1.3 Con mas de una condicion
 ```
 if(condicion1){
   ...
@@ -245,14 +260,14 @@ if(condicion1){
   ...
 }
 ```
-## Condiciones multiples    
-### && (and)
+## 3.2 Condiciones multiples    
+### 3.2.1 && (and)
 Requiere que ambas condiciones den True
 
-### || (or)
+### 3.2.2 || (or)
 Requiere que al menos una de True
 
-### Pequeno ejercicio
+### 3.2.3 Pequeno ejercicio
 ```
 let age = parseInt(prompt(`dame tu edad`,10))
 if(age){
@@ -267,23 +282,24 @@ else{
     age = parseInt(prompt(`Tu edad debe ser un numero`,10))
 }
 ```
-## Truthy and falsy values
-### Valores que te dan False en la condicion
-- 0
-- ""
-- NaN
-- undefined
-- null
+## 3.3 Truthy and falsy values
+### 3.3.1 Valores que te dan False en la condicion
+- 0  
+- ""  
+- NaN  
+- undefined  
+- null  
 
-### Valores que te dan True en la condicion
-- String no vacio
-- Numero diferente de cero
-- Arrays 
-- Objetos
+### 3.3.2 Valores que te dan True en la condicion
+- String no vacio  
+- Numero diferente de cero  
+- Arrays     
+- Objetos  
 
-## switch
+## 3.4 switch
+
+Cuando queremos comparar un valor con una serie de valores.Los ; son opcionales  
 ```
-Cuando queremos comparar un valor con una serie de valores.Los ; son opcionales
 let valorAComparar = prompt(`Introduce un numero entre 1 y 3 `).toUpperCase().trim()
 //trim evita los espacios, y toUpperCase pone todo en mayusculas, esto es para evitar errores
 switch (valorAComparar){
@@ -301,8 +317,8 @@ switch (valorAComparar){
         break;
 }
 ```
-## Ciclos
-### Ciclo for 
+## 3.5 Ciclos
+### 3.5.1 Ciclo for 
 Se declara una variable, mientras la condicion se cumple y luego un incremento
 ```
 for(let i = 0; i <=100; i++){
@@ -312,11 +328,11 @@ for(let i = 0; i <=100; i++){
 // y en cada iteracion va aumentando en 1 gracias a i++
 // en vez de aumentar uno en uno se puede hacer += n  numeros
 ```
-#### break y continue 
-continue evitara esa iteracion, y break detendra el ciclo completo
+#### 3.5.1.1 break y continue 
+continue evitara esa iteracion, y break detendra el ciclo completo  
 
-Con **continue** se evita la iteracion, en este caso se evita el multiplo de 5, aunque tambien se puede hacer
-i % 5 !== 0 que va a dar como resultado lo mismo
+Con **continue** se evita la iteracion, en este caso se evita el multiplo de 5, aunque tambien se puede hacer   
+i % 5 !== 0 que va a dar como resultado lo mismo  
 ```
 for (let i = 0; i <= 50; i++){
     if(i % 5 === 0) continue
@@ -325,7 +341,7 @@ for (let i = 0; i <= 50; i++){
 // esta funcion devuelve los numeros entre 0 y 50 que no son multiplo de 5 
 ```
 
-En este caso se utiliza **break** para detener la iteracion cuando n valga 5, esto devuelve los 5 primeros multiplos de 5
+En este caso se utiliza **break** para detener la iteracion cuando n valga 5, esto devuelve los 5 primeros multiplos de 5  
 ```
 let n = 0
 for (let i = 1; i <= 50; i++){
@@ -337,16 +353,18 @@ for (let i = 1; i <= 50; i++){
 }
 ```
 
-### Ciclo while 
-Mientras la condicion que este en el while se cumpla se ejecuta el codigo
+### 3.5.2 Ciclo while 
+Mientras la condicion que este en el while se cumpla se ejecuta el codigo  
+```
 let i = 0 
 while(condicion){           //Condicion puede ser i<=10 para que siga el ciclo hasta que i valga 10
     console.log(i)
     i++
 }
+```
 
-### Ciclo do while
-Primero realiza la accion, luego pregunta la condicion
+### 3.5.3 Ciclo do while
+Primero realiza la accion, luego pregunta la condicion  
 ``` 
 let password = "Capoeira"
 let pass
@@ -354,30 +372,34 @@ do {
     pass = prompt("Ingrese su contrasena")
 } while(pass !== password)
 ```
-# 4. Clase 4 Funciones
-## Que es una funcion?
-Una funcion es un pedazo de codigo reutilizable, en el que hay un conjunto de instrucciones
-input => funcion => output
-**input** son los argumentos
-El **output** es el valor que devuelve la funcion
-Las funciones sin valor de retorno devuelven undefined
+# 4 Clase 4 Funciones
+## 4.1 Que es una funcion?
+Una funcion es un pedazo de codigo reutilizable, en el que hay un conjunto de instrucciones  
+input => funcion => output  
+**input** son los argumentos  
+El **output** es el valor que devuelve la funcion  
+Las funciones sin valor de retorno devuelven undefined  
 
 Para ejecutar una funcion:
+```
 nombreDeFuncion(argumento1,argumento2,argumento3)
 nombreDeFuncion()
-No siempre se requieren argumentos
+```
+No siempre se requieren argumentos  
 
-Una funcion puede ser metodo de un objeto 
+Una funcion puede ser metodo de un objeto  
+```
 objeto.nombreDeFuncion(argumentos)
 `Hola Mundo`.slice(3)
-
-## Formas de declarar una funcion
-### Declaracion
+```
+## 4.2 Formas de declarar una funcion
+### 4.2.1 Declaracion
+```
 function nombreFuncion(parametros){
     //instrucciones a dar
     return valor
 }
-
+``` 
 Ejemplos:
 ```
 function saludar(persona){
@@ -399,22 +421,27 @@ function saludar(persona,sexo){
 }
 ```
 
-### Expresion
-#### con function(en desuso)               
+### 4.2.2 Expresion
+#### 4.2.2.1 con function(en desuso)     
+```
 var nombreDeFuncion = function() {          // YA NO SE USA
 }
-
-#### funciones de flecha (recomendado desde ES6)
+```
+#### 4.2.2.2 funciones de flecha (recomendado desde ES6)
+```
 const nombreDeFuncion = (parametros) => {
     // instrucciones de la funcion
     return valor
 }
+```
 
 **NO USAR LET PARA LAS FUNCIONES**
+```
 const saludar = (persona,sexo) => {
     return sexo === `m`
             ?   `Bienvenido a la pagina ${persona}`
             :   `Bienvenida a la pagina ${persona}`  
 }
+```
 **Si la funcion de flecha retorna directamente un valor, sin instrucciones adicionales, la sintaxis se reduce**
 const sumar = (a,b) => a + b 
