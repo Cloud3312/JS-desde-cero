@@ -147,30 +147,36 @@ Para hacer un sorteo se podria hacer Math.ceil(Math.random()*20) y devuelve un n
 Una **Propiedad** es un valor que tiene un dato.Por ejemplo: caracteristicas como edad, pais,direccion
 
 #### 2.4.1.1 .lenght
-Devuelve la cantidad de caracteres que tiene un String
+Devuelve la cantidad de caracteres que tiene un String  
+```
 `Hola`.lenght devuelve 4
-
+```
 ### 2.4.2 Metodos 
-Un **Metodo** es una operacion que el dato puede realizar, por ejemplo: acciones como trabajar,programar, disenar.
-Existen metodos sin parametros como:
+Un **Metodo** es una operacion que el dato puede realizar, por ejemplo: acciones como trabajar,programar, disenar.  
+Existen metodos sin parametros como:  
 #### 2.4.2.1 .trim()
-Lo que hace es sacarle los espacios en blanco del inicio y final del String, **NO LOS ESPACIOS QUE ESTAN ENTRE MEDIO**
+Lo que hace es sacarle los espacios en blanco del inicio y final del String, **NO LOS ESPACIOS QUE ESTAN ENTRE MEDIO**  
+```
 `   Hola    `.trim() devuele `Hola`
+```
 #### 2.4.2.2 .toUpperCase()
-Transforma el string que le pasemos a mayusculas
+Transforma el string que le pasemos a mayusculas  
+```
 `hola`.toUpperCase() devuelve `HOLA`
-
+```
 #### 2.4.2.3 .toLoweCase 
-Transforma el string que le pasemos a minusculas
+Transforma el string que le pasemos a minusculas    
+```
 `HOLA`.toLoweCase() devuelve `hola`
-
-Estos pueden ser utilizados por ejemplo, para hacer un cuestionario
-
+```
+Estos pueden ser utilizados por ejemplo, para hacer un cuestionario  
+```
 let answer = prompt(`Cual es la capital de Argentina?`).trim().toUpperCase()   // Abre una ventana en el navegador con esa pregunta
 let message =  answer === `ARGENTINA` 
                ? `Excelente, acertaste`                                        
                : `Respuesta incorrecta`
 alert(message)
+```
 
 Se pueden encontrar caracteres con:
 
