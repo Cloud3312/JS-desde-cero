@@ -3,7 +3,7 @@
 ## 1.1 Variables
 
 Las variables son definidas con:   
-let + nombreDeLaVariable = valorADefinir(pueden ser un String,Boolean,Numero).
+let + nombreDeLaVariable = valorADefinir(pueden ser un String,Boolean,Numero).  
 Es buena practica tener los nombreDeLaVariable en ingles.  
 Ademas, en vez de escribir let en cada variable, se puede separar por comas, para ahorrar un poco de codigo.Los valores de las variables se pueden reasignar
 Ej:
@@ -34,10 +34,11 @@ Son definidos con  ``` `Comillas simples al reves o backtips` ``` , "Comillas do
 
 ### 1.4.4 Boolean 
 Denotan un valor de verdad     
-5 == 5 daria verdadero/true    
-5 == `5` daria verdadero/true ya que JS asi    
-7 == 8 daria falso/false     
-
+```
+5 == 5      //daria verdadero/true    
+5 == `5`    //daria verdadero/true ya que JS asi    
+7 == 8      //daria falso/false     
+```
 ### 1.4.5 Undefined 
 Es cuando la variable no tiene ningun valor asignado o definido
 
@@ -48,9 +49,10 @@ Es cuando la variable nunca fue creada
 
 ### 1.4.8 typeof 
 Devuelve el dato que le pasaste en forma de String  
-``` let prueba = 3  ```
-typeof data devuelve `object`
-
+``` 
+let prueba = 3 
+typeof prueba devuelve `number`
+```
 ## 1.4.9 Compuestos 
 ### 1.4.10 Arrays 
 Guardan mas de un valor por ejemplo ``` let numbers = [1,2,5,6.7] ``` son datos del mismo tipo
@@ -69,8 +71,8 @@ let data = {
 JS  es dinamnicamente tipado, es decir que el interprete deduce que es cada dato.Ademas de que las variables se pueden reedefinir(reasignar,pasarle un nuevo valor)
 
 ## 2.1 Type coertion 
-Es poder concatenar cosas, es la conversión automática o implicita de valores de un tipo de dato a otro (Ejemplo: de cadena de texto a número) 
-true + 1 = 2  porque se considera a true como un 1 y a false como un 0
+Es poder concatenar cosas, es la conversión automática o implicita de valores de un tipo de dato a otro (Ejemplo: de cadena de texto a número)   
+true + 1 = 2  porque se considera a true como un 1 y a false como un 0  
 ``` `Hola Mundo ` + 1 = `Hola Mundo 1` ```  
 Pero si se utiliza la multiplicacion daria NaN not a number
 
@@ -443,5 +445,5 @@ const saludar = (persona,sexo) => {
             :   `Bienvenida a la pagina ${persona}`  
 }
 ```
-**Si la funcion de flecha retorna directamente un valor, sin instrucciones adicionales, la sintaxis se reduce**
+**Si la funcion de flecha retorna directamente un valor, sin instrucciones adicionales, la sintaxis se reduce**  
 ``` const sumar = (a,b) => a + b ```
