@@ -212,17 +212,17 @@ Comienza desde start, y termina en end, el start es la posicion y el end es la c
 Es lo mismo que substring, solo que se diferencia en valores negativos
 
 
-## Clase 3 condicionales y ciclos
-### if
-#### Una linea
+# Clase 3 condicionales y ciclos
+## if
+### Una linea
 if (condicion) // Hacer algo
 
-#### Con bloque
+### Con bloque
 if(condicion){
     ...
 }
 
-#### Con mas de una condicion
+### Con mas de una condicion
 ```
 if(condicion1){
   ...
@@ -233,14 +233,14 @@ if(condicion1){
   ...
 }
 ```
-### Condiciones multiples    
-#### && (and)
+## Condiciones multiples    
+### && (and)
 Requiere que ambas condiciones den True
 
-#### || (or)
+### || (or)
 Requiere que al menos una de True
 
-#### Pequeno ejercicio
+### Pequeno ejercicio
 ```
 let age = parseInt(prompt(`dame tu edad`,10))
 if(age){
@@ -255,21 +255,21 @@ else{
     age = parseInt(prompt(`Tu edad debe ser un numero`,10))
 }
 ```
-### Truthy and falsy values
-#### Valores que te dan False en la condicion
+## Truthy and falsy values
+### Valores que te dan False en la condicion
 - 0
 - ""
 - NaN
 - undefined
 - null
 
-#### Valores que te dan True en la condicion
+### Valores que te dan True en la condicion
 - String no vacio
 - Numero diferente de cero
 - Arrays 
 - Objetos
 
-### switch
+## switch
 ```
 Cuando queremos comparar un valor con una serie de valores.Los ; son opcionales
 let valorAComparar = prompt(`Introduce un numero entre 1 y 3 `).toUpperCase().trim()
@@ -289,8 +289,8 @@ switch (valorAComparar){
         break;
 }
 ```
-### Ciclos
-#### Ciclo for 
+## Ciclos
+### Ciclo for 
 Se declara una variable, mientras la condicion se cumple y luego un incremento
 ```
 for(let i = 0; i <=100; i++){
@@ -300,7 +300,7 @@ for(let i = 0; i <=100; i++){
 // y en cada iteracion va aumentando en 1 gracias a i++
 // en vez de aumentar uno en uno se puede hacer += n  numeros
 ```
-##### break y continue 
+#### break y continue 
 continue evitara esa iteracion, y break detendra el ciclo completo
 
 Con **continue** se evita la iteracion, en este caso se evita el multiplo de 5, aunque tambien se puede hacer
@@ -325,7 +325,7 @@ for (let i = 1; i <= 50; i++){
 }
 ```
 
-#### Ciclo while 
+### Ciclo while 
 Mientras la condicion que este en el while se cumpla se ejecuta el codigo
 let i = 0 
 while(condicion){           //Condicion puede ser i<=10 para que siga el ciclo hasta que i valga 10
@@ -333,7 +333,7 @@ while(condicion){           //Condicion puede ser i<=10 para que siga el ciclo h
     i++
 }
 
-#### Ciclo do while
+### Ciclo do while
 Primero realiza la accion, luego pregunta la condicion
 ``` 
 let password = "Capoeira"
@@ -341,3 +341,68 @@ let pass
 do {
     pass = prompt("Ingrese su contrasena")
 } while(pass !== password)
+```
+# 4. Clase 4 Funciones
+## Que es una funcion?
+Una funcion es un pedazo de codigo reutilizable, en el que hay un conjunto de instrucciones
+input => funcion => output
+**input** son los argumentos
+El **output** es el valor que devuelve la funcion
+Las funciones sin valor de retorno devuelven undefined
+
+Para ejecutar una funcion:
+nombreDeFuncion(argumento1,argumento2,argumento3)
+nombreDeFuncion()
+No siempre se requieren argumentos
+
+Una funcion puede ser metodo de un objeto 
+objeto.nombreDeFuncion(argumentos)
+`Hola Mundo`.slice(3)
+
+## Formas de declarar una funcion
+### Declaracion
+function nombreFuncion(parametros){
+    //instrucciones a dar
+    return valor
+}
+
+Ejemplos:
+```
+function saludar(persona){
+    return `Hola ${persona}`
+}
+
+function saludar(persona,sexo){
+    return sexo === `m`
+            ?   `Bienvenido a la pagina ${persona}`
+            :   `Bienvenida a la pagina ${persona}`  
+}
+
+function saludar(persona,sexo){
+    let saludo = sexo === "m"
+                   ?  `Bienvenido`
+                   :  `Bienvenida`
+    return `${saludo} a la pagina ${persona}`               
+    
+}
+```
+
+### Expresion
+#### con function(en desuso)               
+var nombreDeFuncion = function() {          // YA NO SE USA
+}
+
+#### funciones de flecha (recomendado desde ES6)
+const nombreDeFuncion = (parametros) => {
+    // instrucciones de la funcion
+    return valor
+}
+
+**NO USAR LET PARA LAS FUNCIONES**
+const saludar = (persona,sexo) => {
+    return sexo === `m`
+            ?   `Bienvenido a la pagina ${persona}`
+            :   `Bienvenida a la pagina ${persona}`  
+}
+**Si la funcion de flecha retorna directamente un valor, sin instrucciones adicionales, la sintaxis se reduce**
+const sumar = (a,b) => a + b 
