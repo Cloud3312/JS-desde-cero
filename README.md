@@ -447,3 +447,5 @@ const saludar = (persona,sexo) => {
 ```
 **Si la funcion de flecha retorna directamente un valor, sin instrucciones adicionales, la sintaxis se reduce**  
 ``` const sumar = (a,b) => a + b ```
+## Parametros y argumentos
+###
