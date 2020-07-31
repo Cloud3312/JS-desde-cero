@@ -328,7 +328,7 @@ for(let i = 0; i <=100; i++){
 }
 // Imprime todos los numeros que sean divisibles por 5, empieza preguntando por 0
 // y en cada iteracion va aumentando en 1 gracias a i++
-// en vez de aumentar uno en uno se puede hacer += n  numeros
+// en vez de aumentar uno en uno se puede hacer += n  numerosc 
 ```
 #### 3.5.1.1 break y continue 
 continue evitara esa iteracion, y break detendra el ciclo completo  
@@ -447,5 +447,74 @@ const saludar = (persona,sexo) => {
 ```
 **Si la funcion de flecha retorna directamente un valor, sin instrucciones adicionales, la sintaxis se reduce**  
 ``` const sumar = (a,b) => a + b ```
-## Parametros y argumentos
-###
+## 4.3 Parametros y argumentos
+### 4.3.1 Parametros
+Variables locales que se definen en la declaracion de la funcion  
+Se pueden asignar valores por defecto a los parametros, como en el siguiente ejemplo:
+```
+const saludar = (persona = `visitante`,sexo = `m`) => {
+    return sexo === `m`
+            ?   `Bienvenido a la pagina ${persona}`
+            :   `Bienvenida a la pagina ${persona}`  
+}
+```
+
+### 4.3.2 Argumentos 
+Valores asignados a los parametros  
+Si hay mas argumentos que parametros, los adicionales se ignoran  
+Si hay menos argumentos que parametros los faltantes son undefined a menos que tengan un valor por defecto
+
+### 4.3.3 Parametro rest(spread operator)
+El operador de propagación spread operator permite que una expresión sea     
+expandida en situaciones donde se esperan múltiples argumentos.  
+Los ... son un operador, como por ejemplo edad++  
+```
+const sumarTodos = (...numeros) => {
+    console.log(numeros)
+}
+sumarTodos(1,2,3,4,5,6,7) // devuelve un array con la posicion de esos numeros 
+```
+
+```
+const sumarTodos =(...numeros) =>{
+    let resultado = 0
+    for(let i = 0; i < numeros.length; i++){
+        resultado += numeros[i]
+    } 
+    return resultado
+}
+```
+
+## Las funciones son Ciudadanos de primera clase
+.Pueden ser almacenadas en variables o constantes  
+funcion por expresion        
+const c = console.log    
+
+.Pueden ser pasadas como argumentos de otra funcion
+callbacks
+
+.Pueden ser retornadas por otra funcion
+closures
+Los closures son funciones que tienen otras funciones dentro  
+
+.Pueden tener metodos o propiedades 
+POO
+
+## Tipos de funciones
+### Funciones puras
+Son aquellas que no causan un efecto secundario, y siempre devuelve los mismos valores para los  
+mismos parametros
+
+### Funciones autoinvocadas
+Son aquellas que se invocan a si mismas. Actualmente no se usan tanto
+
+### Funciones nombradas y anonimas
+Las nombradas son aquellas que llamamos funcionAlgo().  
+Las anonimas son pasadas en callbacks, es una funcion pasada a otra funcion como parametro
+```
+//Como primer parametro necesita una funcion, en este caso anonima(ademas en este caso sin parametros), y necesita milisegundos
+setTimeout(() => {
+    alert(`Hola crack`)    
+},3000)
+// Esto hara que despues de 3000 milisegundos ponga un `Hola crack`
+```
