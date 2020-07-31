@@ -518,3 +518,10 @@ setTimeout(() => {
 },3000)
 // Esto hara que despues de 3000 milisegundos ponga un `Hola crack`
 ```
+
+## Scope 
+Es el contexto en el que existe una variable
+
+### Closures
+
+### This
