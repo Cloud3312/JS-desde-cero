@@ -523,5 +523,53 @@ setTimeout(() => {
 Es el contexto en el que existe una variable
 
 ### Closures
-
+A traves de funciones internas se pueden llegar a valores externos
+```
+function aumentar(){
+    let numero = 0
+    return function(){
+        numero++
+        console.log(numero)
+    }
+}
+//Esto devuelve 1 
+```
 ### This
+Represneta el objeto del cual se ejecuta la funcion  
+Las funciones de flecha permiten acceder al this superior dentro de un closure (lexical this)  
+```
+let user = {
+    nombre: `Marcos`
+    edad: 26
+    getEdad() {
+        console.log(this.edad)
+    }
+}
+user.getEdad()
+//Si no le pongo el this, el programa no andaria ya que en ningun lado puede detectar  
+la variable edad, diria que no esta definida
+```
+
+# Clase 5 Arrays 
+## Concepto
+Un array es una lista de valores separados por comas y encerrados por corchetes.  
+No necesariamente tienen que ser todos del mismo tipo
+```
+let array = [`hola`, 2, true, undefined, [1,2,3,4]]
+
+//Para obtener un elemento del array hago, array[1], por ejemplo
+//Esto devuelve 2, ya que el numero que va entre [], es el indice, recordando que comienza en 0
+
+//Para obtener el ultimo elemento del array se puede hacer:
+array[array.length - 1]  // Esto devuelve el ultimo elemento de ese array
+
+```
+### Desestructuracion 
+Para acceder a cada elemento del array
+```
+let arr5 = [`Hola`,`amigos`,`de`,`Argentina`]
+let [s1,s2,s3,s4] = arr5   //cada s es una variable
+
+//Al poner s2 vendra la segunda posicion del array, y devolvera `amigos`, esto es desestructurar, e igualar los elementos  
+//del array con una variable
+```
