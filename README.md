@@ -568,8 +568,104 @@ array[array.length - 1]  // Esto devuelve el ultimo elemento de ese array
 Para acceder a cada elemento del array
 ```
 let arr5 = [`Hola`,`amigos`,`de`,`Argentina`]
-let [s1,s2,s3,s4] = arr5   //cada s es una variable
+let [s1,s2,s3,s4] = arr5   //cada s es una variable, con la posicion del elemento en el array.No necesariamenete deben llamarse s1,s2, etc
 
 //Al poner s2 vendra la segunda posicion del array, y devolvera `amigos`, esto es desestructurar, e igualar los elementos  
 //del array con una variable
+```
+## Metodos para agregar y quitar elementos de arrays 
+Los metodos van con . y la funcion
+
+### Al inicio del array
+#### .unshift(value)
+Agrega un valor al principio del array, y devuelve el length de ese array 
+```
+let arr = [1,2,3,4]
+arr.unshift(`Hola`)
+//retorna el array con el elemento agregado al inicio:
+[`Hola`,1,2,3,4]
+```
+#### .shift()
+Elimina el primer valor del array, y retorna el valor eliminado
+```
+arr.shift()
+//Retorna `Hola`
+//El arr ahora es [1,2,3,4]
+```
+### Al final del array
+#### .push(value)
+Agrega un elemento al final del array y devuelve el length de ese array con el elemento agregado
+```
+let arr = [1,2,3,4]
+arr.push(5)
+//arr ahora devuelve (5) [1,2,3,4,5]
+```
+#### .pop()
+Quita y retorna el ultimo elemento del array
+```
+arr.pop() //Retorna 5,ya que es el elemento final a eliminar 
+//Al llamar al arr ahora devuelve (4) [1,2,3,4]
+```
+
+### Agregar o quitar elementos en una posicion personalizada del array
+#### .splice(startIndex,quantity, value1,value2,value3...)
+Retorna un array con los elementos agregados en la posicion dada por StartIndex.
+Si el valor de quantity es 0, no elimina ningun elemento de ese array, al poner 1 o mas, son las posiciones que va a eliminar partiendo desde startIndex.
+value1,value2,value3... son los valores que se van a agregar en el array
+
+```
+let arr = [`Argentina`,`Chile`,`Uruguay`,`Peru`,`Bolivia`]
+
+arr.splice(1,0,`Paraguay`,`Ecuador`) //Esto retorna 0, ya que no se elimino ningun elemento
+//El array pasa a tener [`Argentina`,`Paraguay`,`Ecuador`,`Chile`,`Uruguay`,`Peru`,`Bolivia`]
+
+```
+
+#### ```.slice(start,[end])```
+Extrae en un **nuevo array**,los valores a partir de start hasta ```[end]-1```, es decir el ultimo (de end)no lo incluye
+```
+arr.slice(1,3) //Devuelve en un nuevo array los elementos eliminados, el array original no se modifica
+[`Chile`,`Uruguay`]
+
+```
+### Ordenar elementos de un array
+#### .reverse()
+Se puede utilizar para dar vuelta un texto
+```
+`Hola mama`.split(``).reverse().join(``) 
+// .split con un argumento vacio, separa las letras del string,devolviendo un array,  
+//y reverse las da vuelta y .join lo convierte en un string
+//Esto retorna
+"amam aloH"
+
+//Se puede hacer una funcion que devuelve el reverso de un texto
+
+const reverseText = string => string.split(``).reverse().join(``)
+```
+
+#### .sort
+Ordena los elementos de un array y devuelve el array ordenado
+```
+let arr2 = [`B`,`A`,`Z`,`F`]
+arr2.sort()
+//Devuelve  (4)[`A`,`B`,`F`,`Z`]
+```
+Esto no es tan asi con los numeros, ya que se guia por los caracteres UNICODE, por lo tanto los ordena como si fueran strings
+Por lo tanto se utiliza un callback, es decir una funcion que recibe como parametro otra funcion.
+
+```
+let numbers = [10,100,1000,2,20,35,45]
+numbers.sort((a,b) => a-b)      //Esta funcion lo que hace es devolver los elementos ordenados numericamente,
+                                //Dentro de estos parametros,hay un algoritmo que se encarga de esto.
+                                //Si a > b el resultado es positivo, sino, es negativo.Con este resultado los ordena
+
+(7) [ 2, 10, 20, 35, 45, 100, 1000 ]
+```
+
+### Concatenar y transformar a strings
+#### .join
+Toma un array y lo convierte a un String
+```
+let numbers = [1,2,3,4,5,6]
+numbers.join(` `) //Devuelve "1 2 3 4 5 6"
 ```
