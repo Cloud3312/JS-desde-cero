@@ -669,3 +669,9 @@ Toma un array y lo convierte a un String
 let numbers = [1,2,3,4,5,6]
 numbers.join(` `) //Devuelve "1 2 3 4 5 6"
 ```
+#### .concat
+Junta dos arrays en uno nuevo
+```
+numbers.concat(values)
+//values puede equivaler a un array, o a valores 
+```
