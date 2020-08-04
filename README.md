@@ -673,5 +673,9 @@ numbers.join(` `) //Devuelve "1 2 3 4 5 6"
 Junta dos arrays en uno nuevo
 ```
 numbers.concat(values)
-//values puede equivaler a un array, o a valores 
+//values puede equivaler a un array, o a valores.Funciona como push, pero no modifica el array original, crea unno nuevo
 ```
+### Encontrar elementos en un array
+
+#### .indexOf(value)
+Devuelve la posicion del elemento que estoy buscando.Devuelve -1 si no lo encuentra
