@@ -679,3 +679,19 @@ numbers.concat(values)
 
 #### .indexOf(value)
 Devuelve la posicion del elemento que estoy buscando.Devuelve -1 si no lo encuentra
+
+#### .find(callback) 
+Devuelve el primer elemento que coincida con lo buscado por el callback
+```
+let numbers = [1,2,3,4,5] 
+numbers.find(number => number > 2)  //Devuelve 3
+```
+
+#### .findIndex(callback)
+Devuelve la posicion del elemento que estoy buscando.Como parametro necesita una funcion
+```
+let numbers = [1,2,3,4,5]  
+numbers.findIndex(number => number > 2) //Devuelve 2, que seria la posicion del numero 3 
+```
+
+### Spread operator para eliminar elementos de un array
