@@ -695,3 +695,13 @@ numbers.findIndex(number => number > 2) //Devuelve 2, que seria la posicion del 
 ```
 
 ### Spread operator para eliminar elementos de un array
+#### ```Set([array])```
+Elimina elementos duplicados de un array, devolviendo un objeto es decir algo entre {}
+```
+let numbers = [1,2,3,4,4,5,5]  
+[...new Set(numbers)]  //Devuelve un array de los numeros dados sin duplicados
+
+const removeDuplicates = arr => [...new Set(arr)]   //Lo mismo que lo de arriba pero ahora en una funcion
+```
+
+### Objeto Math con arrays
