@@ -749,4 +749,58 @@ numbers.forEach( elemento => {
     arr.push(elemento*elemento)
 })
 ```
-### .some() .every()
+
+```
+teachers.forEach(el => if(el === `Braian`) ) //Recorre todos los elementos y si alguno cumple la condicion retorna True.
+//El codigo se hace mas largo por eso es preferible usar .every() o .some()
+```
+
+```
+let multiplos = []
+let numbers = [2,4,8]
+numbers.forEach(el => {
+  multiplos.push(el*el)
+})
+// Devuelve Array(3) [ 4, 16, 64 ]
+```
+### Con .some(callback)
+Busca en el array si hay algun elemento que cumpla la condicion dada, devuelve un boolean.
+Ej: buscar en el array de teachers algun profesor que tenga la letra `a`
+```
+teachers.some(el => el.includes(`a`)) //Va a devolver True
+```
+
+Ej: Comprobar que en el array de teachers haya al menos un profe con mas de 5 letras  
+```
+teachers.every(el => el.lenght >= 5) //Retornara True ya que hay un profe que tiene mas de 5 letras
+```
+### Con .every(callback)
+Busca en el array si todos los elementos cumplen la condicion dada, devuelve un boolean
+Ej: buscar en el array de teachers todos los teacher que tengan la letra `a`.Si alguno no lo tiene dara False
+```
+teachers.every(el => el.includes(`a`)) //Va a devolver False
+```
+Ej: Comprobar que en el array de teachers todos tengan mas de 5 letras cada uno
+```
+teachers.every(el => el.lenght >= 5) //Retornara False ya que hay profes que tienen menos letras
+```
+### map(callback)
+Transforma todos los elementos del array segun el callback.Pero no modifica el array original
+```
+let numbers = [2,4,8]
+let numbersAlCuadrado = numbers.map(el => el*el)
+//Devuelve Array(3) [ 4, 16, 64 ] y numbers no es modificado
+```
+### .filter(callback)
+Filtra los elementos que cumplan la condicion que este en el callback\
+```
+let numbers = [2,4,8,10,12]
+let numbersFiltrados = numbers.filter(el => el >= 8)
+// Devuelve Array(3) [ 8, 10, 12 ], es decir filtra solos los numeros mayores o iguales a 8
+```
+### .reduce(callback)
+Reduce todos los elementos a un unico valor
+```
+let sum = numbers.reduce((a,b)=> a + b)
+//sum Ahora retorna 36 
+```
