@@ -699,9 +699,53 @@ numbers.findIndex(number => number > 2) //Devuelve 2, que seria la posicion del 
 Elimina elementos duplicados de un array, devolviendo un objeto es decir algo entre {}
 ```
 let numbers = [1,2,3,4,4,5,5]  
-[...new Set(numbers)]  //Devuelve un array de los numeros dados sin duplicados
+[...new Set(numbers)]  //Devuelve un array de los numeros dados sin duplicados.Set es un objeto
 
 const removeDuplicates = arr => [...new Set(arr)]   //Lo mismo que lo de arriba pero ahora en una funcion
 ```
 
 ### Objeto Math con arrays
+Math se utiliza como un objeto matematico.
+
+#### Math.min(values)
+Devuelve el elemento mas chico de una lista de numeros.Requieren una lista, no reciben arrays
+```
+Math.min(...numbers) // Devuelve 1
+```
+#### Math.max(values)
+Devuelve el elemento mas grande de una lista de numeros.Requieren una lista, no reciben arrays
+```
+Math.max(...numbers) //Devuelve 5
+```
+
+## Recorrer un array
+### Con for
+```
+let arr = [`a`,`b`,`c`,`d`,`e`]
+for (let i = 0; i < arr.length; i++){
+    console.log(arr[i])
+}
+```
+### Con for of
+En este caso teacher es una variable que va a contener los elementos del array teachers.Pero teacher puede tener otro nombre
+```
+let teachers = [`Braian`,`Miguel`,`Jose`,`Alvaro`] 
+for (let teacher of teachers){
+    console.log(teacher)
+}
+//Esto devuelve todos los profesores que hay en la variable teachers, pero ahora en la variable teacher
+```
+### Con .forEach(callback)
+Se utiliza forEach cuando se le quiere aplicar una funcion a cada elemento.Recibe el elemento y el indice.Ya que for of no te lo da.
+```
+teachers.forEach( (elemento,i) => {
+    console.log(elemento)
+    console.log(i)  // i es el indice
+})
+
+let arr = []
+numbers.forEach( elemento => {
+    arr.push(elemento*elemento)
+})
+```
+### .some() .every()
