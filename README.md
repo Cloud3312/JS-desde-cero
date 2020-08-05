@@ -724,7 +724,8 @@ Math.max(...numbers) //Devuelve 5
 let arr = [`a`,`b`,`c`,`d`,`e`]
 for (let i = 0; i < arr.length; i++){
     console.log(arr[i])
-}
+}   
+//Devuelve el los elementos del array. i representa el indice del array, es decir en donde te encontras parado
 ```
 ### Con for of
 En este caso teacher es una variable que va a contener los elementos del array teachers.Pero teacher puede tener otro nombre
