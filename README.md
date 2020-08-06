@@ -738,6 +738,7 @@ for (let teacher of teachers){
 ```
 ### Con .forEach(callback)
 Se utiliza forEach cuando se le quiere aplicar una funcion a cada elemento.Recibe el elemento y el indice.Ya que for of no te lo da.
+Si se tiene que recorrer un arreglo para hacer operaciones que no se necesitan almacenar, usar forEach, si se las necesita para despues utilizar .map, aunque map es mas lento 
 ```
 teachers.forEach( (elemento,i) => {
     console.log(elemento)
@@ -761,7 +762,7 @@ let numbers = [2,4,8]
 numbers.forEach(el => {
   multiplos.push(el*el)
 })
-// Devuelve Array(3) [ 4, 16, 64 ]
+// Devuelve undefined, pero multiplos Devuelve Array(3) [ 4, 16, 64 ]
 ```
 ### Con .some(callback)
 Busca en el array si hay algun elemento que cumpla la condicion dada, devuelve un boolean.
@@ -803,4 +804,10 @@ Reduce todos los elementos a un unico valor
 ```
 let sum = numbers.reduce((a,b)=> a + b)
 //sum Ahora retorna 36 
+```
+# Clase 6 Objetos
+## 6.1 Que son los objetos?
+Es una estructura de datos 
+```
+
 ```
