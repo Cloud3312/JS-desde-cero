@@ -485,7 +485,7 @@ const sumarTodos =(...numeros) =>{
 }
 ```
 
-## Las funciones son Ciudadanos de primera clase
+## 4.4 Las funciones son Ciudadanos de primera clase
 .Pueden ser almacenadas en variables o constantes  
 funcion por expresion        
 const c = console.log    
@@ -500,15 +500,15 @@ Los closures son funciones que tienen otras funciones dentro
 .Pueden tener metodos o propiedades 
 POO
 
-## Tipos de funciones
-### Funciones puras
+## 4.5 Tipos de funciones
+### 4.5.1 Funciones puras
 Son aquellas que no causan un efecto secundario, y siempre devuelve los mismos valores para los  
 mismos parametros
 
-### Funciones autoinvocadas
+### 4.5.2 Funciones autoinvocadas
 Son aquellas que se invocan a si mismas. Actualmente no se usan tanto
 
-### Funciones nombradas y anonimas
+### 4.5.3 Funciones nombradas y anonimas
 Las nombradas son aquellas que llamamos funcionAlgo().  
 Las anonimas son pasadas en callbacks, es una funcion pasada a otra funcion como parametro
 ```
@@ -519,10 +519,10 @@ setTimeout(() => {
 // Esto hara que despues de 3000 milisegundos ponga un `Hola crack`
 ```
 
-## Scope 
+## 4.6 Scope 
 Es el contexto en el que existe una variable
 
-### Closures
+### 4.6.1 Closures
 A traves de funciones internas se pueden llegar a valores externos
 ```
 function aumentar(){
@@ -534,7 +534,7 @@ function aumentar(){
 }
 //Esto devuelve 1 
 ```
-### This
+### 4.6.2 This
 Represneta el objeto del cual se ejecuta la funcion  
 Las funciones de flecha permiten acceder al this superior dentro de un closure (lexical this)  
 ```
@@ -550,8 +550,8 @@ user.getEdad()
 la variable edad, diria que no esta definida
 ```
 
-# Clase 5 Arrays 
-## Concepto
+# 5 Clase 5 Arrays 
+## 5.1 Concepto
 Un array es una lista de valores separados por comas y encerrados por corchetes.  
 No necesariamente tienen que ser todos del mismo tipo
 ```
@@ -564,7 +564,7 @@ let array = [`hola`, 2, true, undefined, [1,2,3,4]]
 array[array.length - 1]  // Esto devuelve el ultimo elemento de ese array
 
 ```
-### Desestructuracion 
+### 5.1.1 Desestructuracion 
 Para acceder a cada elemento del array
 ```
 let arr5 = [`Hola`,`amigos`,`de`,`Argentina`]
@@ -573,11 +573,11 @@ let [s1,s2,s3,s4] = arr5   //cada s es una variable, con la posicion del element
 //Al poner s2 vendra la segunda posicion del array, y devolvera `amigos`, esto es desestructurar, e igualar los elementos  
 //del array con una variable
 ```
-## Metodos para agregar y quitar elementos de arrays 
+## 5.2 Metodos para agregar y quitar elementos de arrays 
 Los metodos van con . y la funcion
 
-### Al inicio del array
-#### .unshift(value)
+### 5.2.1 Al inicio del array
+#### 5.2.1.1 .unshift(value)
 Agrega un valor al principio del array, y devuelve el length de ese array 
 ```
 let arr = [1,2,3,4]
@@ -585,30 +585,30 @@ arr.unshift(`Hola`)
 //retorna el array con el elemento agregado al inicio:
 [`Hola`,1,2,3,4]
 ```
-#### .shift()
+#### 5.2.1.2 .shift()
 Elimina el primer valor del array, y retorna el valor eliminado
 ```
 arr.shift()
 //Retorna `Hola`
 //El arr ahora es [1,2,3,4]
 ```
-### Al final del array
-#### .push(value)
+### 5.2.2 Al final del array
+#### 5.2.2.1 .push(value)
 Agrega un elemento al final del array y devuelve el length de ese array con el elemento agregado
 ```
 let arr = [1,2,3,4]
 arr.push(5)
 //arr ahora devuelve (5) [1,2,3,4,5]
 ```
-#### .pop()
+#### 5.2.2.2 .pop()
 Quita y retorna el ultimo elemento del array
 ```
 arr.pop() //Retorna 5,ya que es el elemento final a eliminar 
 //Al llamar al arr ahora devuelve (4) [1,2,3,4]
 ```
 
-### Agregar o quitar elementos en una posicion personalizada del array
-#### .splice(startIndex,quantity, value1,value2,value3...)
+### 5.2.3 Agregar o quitar elementos en una posicion personalizada del array
+#### 5.2.3.1 .splice(startIndex,quantity, value1,value2,value3...)
 Retorna un array con los elementos agregados en la posicion dada por StartIndex.
 Si el valor de quantity es 0, no elimina ningun elemento de ese array, al poner 1 o mas, son las posiciones que va a eliminar partiendo desde startIndex.
 value1,value2,value3... son los valores que se van a agregar en el array
@@ -621,15 +621,15 @@ arr.splice(1,0,`Paraguay`,`Ecuador`) //Esto retorna 0, ya que no se elimino ning
 
 ```
 
-#### ```.slice(start,[end])```
+#### 5.2.3.2 ```.slice(start,[end])```
 Extrae en un **nuevo array**,los valores a partir de start hasta ```[end]-1```, es decir el ultimo (de end)no lo incluye
 ```
 arr.slice(1,3) //Devuelve en un nuevo array los elementos eliminados, el array original no se modifica
 [`Chile`,`Uruguay`]
 
 ```
-### Ordenar elementos de un array
-#### .reverse()
+### 5.2.4 Ordenar elementos de un array
+#### 5.2.4.1 .reverse()
 Se puede utilizar para dar vuelta un texto
 ```
 `Hola mama`.split(``).reverse().join(``) 
@@ -643,7 +643,7 @@ Se puede utilizar para dar vuelta un texto
 const reverseText = string => string.split(``).reverse().join(``)
 ```
 
-#### .sort
+#### 5.2.4.2 .sort
 Ordena los elementos de un array y devuelve el array ordenado
 ```
 let arr2 = [`B`,`A`,`Z`,`F`]
@@ -662,40 +662,40 @@ numbers.sort((a,b) => a-b)      //Esta funcion lo que hace es devolver los eleme
 (7) [ 2, 10, 20, 35, 45, 100, 1000 ]
 ```
 
-### Concatenar y transformar a strings
-#### .join
+### 5.2.5 Concatenar y transformar a strings
+#### 5.2.5.1 .join
 Toma un array y lo convierte a un String
 ```
 let numbers = [1,2,3,4,5,6]
 numbers.join(` `) //Devuelve "1 2 3 4 5 6"
 ```
-#### .concat
+#### 5.2.5.2 .concat
 Junta dos arrays en uno nuevo
 ```
 numbers.concat(values)
 //values puede equivaler a un array, o a valores.Funciona como push, pero no modifica el array original, crea unno nuevo
 ```
-### Encontrar elementos en un array
+### 5.2.6 Encontrar elementos en un array
 
-#### .indexOf(value)
+#### 5.2.6.1 .indexOf(value)
 Devuelve la posicion del elemento que estoy buscando.Devuelve -1 si no lo encuentra
 
-#### .find(callback) 
+#### 5.2.6.2 .find(callback) 
 Devuelve el primer elemento que coincida con lo buscado por el callback
 ```
 let numbers = [1,2,3,4,5] 
 numbers.find(number => number > 2)  //Devuelve 3
 ```
 
-#### .findIndex(callback)
+#### 5.2.6.3 .findIndex(callback)
 Devuelve la posicion del elemento que estoy buscando.Como parametro necesita una funcion
 ```
 let numbers = [1,2,3,4,5]  
 numbers.findIndex(number => number > 2) //Devuelve 2, que seria la posicion del numero 3 
 ```
 
-### Spread operator para eliminar elementos de un array
-#### ```Set([array])```
+### 5.2.7 Spread operator para eliminar elementos de un array
+#### 5.2.7.1 ```Set([array])```
 Elimina elementos duplicados de un array, devolviendo un objeto es decir algo entre {}
 ```
 let numbers = [1,2,3,4,4,5,5]  
@@ -704,22 +704,22 @@ let numbers = [1,2,3,4,4,5,5]
 const removeDuplicates = arr => [...new Set(arr)]   //Lo mismo que lo de arriba pero ahora en una funcion
 ```
 
-### Objeto Math con arrays
+### 5.2.8 Objeto Math con arrays
 Math se utiliza como un objeto matematico.
 
-#### Math.min(values)
+#### 5.2.8.1 Math.min(values)
 Devuelve el elemento mas chico de una lista de numeros.Requieren una lista, no reciben arrays
 ```
 Math.min(...numbers) // Devuelve 1
 ```
-#### Math.max(values)
+#### 5.2.8.2 Math.max(values)
 Devuelve el elemento mas grande de una lista de numeros.Requieren una lista, no reciben arrays
 ```
 Math.max(...numbers) //Devuelve 5
 ```
 
-## Recorrer un array
-### Con for
+## 5.3 Recorrer un array
+### 5.3.1 Con for
 ```
 let arr = [`a`,`b`,`c`,`d`,`e`]
 for (let i = 0; i < arr.length; i++){
@@ -727,7 +727,7 @@ for (let i = 0; i < arr.length; i++){
 }   
 //Devuelve el los elementos del array. i representa el indice del array, es decir en donde te encontras parado
 ```
-### Con for of
+### 5.3.2 Con for of
 En este caso teacher es una variable que va a contener los elementos del array teachers.Pero teacher puede tener otro nombre
 ```
 let teachers = [`Braian`,`Miguel`,`Jose`,`Alvaro`] 
@@ -736,7 +736,7 @@ for (let teacher of teachers){
 }
 //Esto devuelve todos los profesores que hay en la variable teachers, pero ahora en la variable teacher
 ```
-### Con .forEach(callback)
+### 5.3.3 Con .forEach(callback)
 Se utiliza forEach cuando se le quiere aplicar una funcion a cada elemento.Recibe el elemento y el indice.Ya que for of no te lo da.
 Si se tiene que recorrer un arreglo para hacer operaciones que no se necesitan almacenar, usar forEach, si se las necesita para despues utilizar .map, aunque map es mas lento 
 ```
@@ -764,7 +764,7 @@ numbers.forEach(el => {
 })
 // Devuelve undefined, pero multiplos Devuelve Array(3) [ 4, 16, 64 ]
 ```
-### Con .some(callback)
+### 5.3.4 Con .some(callback)
 Busca en el array si hay algun elemento que cumpla la condicion dada, devuelve un boolean.
 Ej: buscar en el array de teachers algun profesor que tenga la letra `a`
 ```
@@ -775,7 +775,7 @@ Ej: Comprobar que en el array de teachers haya al menos un profe con mas de 5 le
 ```
 teachers.every(el => el.lenght >= 5) //Retornara True ya que hay un profe que tiene mas de 5 letras
 ```
-### Con .every(callback)
+### 5.3.5 Con .every(callback)
 Busca en el array si todos los elementos cumplen la condicion dada, devuelve un boolean
 Ej: buscar en el array de teachers todos los teacher que tengan la letra `a`.Si alguno no lo tiene dara False
 ```
@@ -785,27 +785,27 @@ Ej: Comprobar que en el array de teachers todos tengan mas de 5 letras cada uno
 ```
 teachers.every(el => el.lenght >= 5) //Retornara False ya que hay profes que tienen menos letras
 ```
-### map(callback)
+### 5.3.6 map(callback)
 Transforma todos los elementos del array segun el callback.Pero no modifica el array original
 ```
 let numbers = [2,4,8]
 let numbersAlCuadrado = numbers.map(el => el*el)
 //Devuelve Array(3) [ 4, 16, 64 ] y numbers no es modificado
 ```
-### .filter(callback)
+### 5.3.7 .filter(callback)
 Filtra los elementos que cumplan la condicion que este en el callback\
 ```
 let numbers = [2,4,8,10,12]
 let numbersFiltrados = numbers.filter(el => el >= 8)
 // Devuelve Array(3) [ 8, 10, 12 ], es decir filtra solos los numeros mayores o iguales a 8
 ```
-### .reduce(callback)
+### 5.3.8 .reduce(callback)
 Reduce todos los elementos a un unico valor
 ```
 let sum = numbers.reduce((a,b)=> a + b)
 //sum Ahora retorna 36 
 ```
-# Clase 6 Objetos
+# 6 Clase 6 Objetos
 ## 6.1 Que son los objetos?
 Es una estructura de datos 
 ```
