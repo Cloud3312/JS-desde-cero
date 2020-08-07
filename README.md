@@ -807,7 +807,57 @@ let sum = numbers.reduce((a,b)=> a + b)
 ```
 # 6 Clase 6 Objetos
 ## 6.1 Que son los objetos?
-Es una estructura de datos 
+Es una estructura de datos.Los objetos poseen propiedades(caracteristicas) y metodos(cosas que puede hacer)
 ```
+{
+propiedad: valor,
+propiedad2: valor2,
+propiedad3: valor3      //y asi sucesivamente
+metodo() {
+    //codigo del metodo 
+    }
+}
+```
+### 6.1.1 Propiedades y metodos de los objetos
+```
+let perro = {
+    nombre: `Rodolfo`,
+    edad: 3,
+    color: `Negro`,
+    sexo: `Macho`,
+    vacunas: True,
+    correr(){
+    console.log(`${this.nombre} corre`)  //${this.nombre}  sirve para meter una variable dentro de un string
+    },
+}
+```
+Para obtener la propiedad se utiliza nombreDelObjeto.propiedad. 
+perro.nombre   //Devuelve `Rodolfo`  
 
+Para obtener el metodo se utiliza nombreDelObjeto.nombreDelMetodo()    
+perro.correr() //Devuelve `Rodolfo corre`  
+
+#### Propiedades
+Otra forma de llamar a las propiedades es con:
 ```
+perro.[`nombre`]
+```
+### Operadores, quitar y agregar propiedades
+#### delete
+Borra una propiedad del objeto
+```
+delete perro.edad
+```
+Para eliminar un metodo, es decir una funcion/o accion dentro del objeto
+```
+delete perro.correr   //Sin colocar los parantesis, ya que al hacerlo se ejecutaria la funcion
+```
+#### Agregar propiedad al objeto
+```
+perro.edad = 3      //Agrega la propiedad al objeto
+```
+Tambien se puede hacer con corchetes
+```
+perro.[feliz] = True        
+```
+## Prototipos y cadena de prototipos
