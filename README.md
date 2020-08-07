@@ -861,3 +861,16 @@ Tambien se puede hacer con corchetes
 perro.[feliz] = True        
 ```
 ## Prototipos y cadena de prototipos
+Una cadena de prototipos es un molde del cual se crea un objeto, que a su vez puede tener otro molde y este otro molde.
+
+Object.getPrototypeof(value)  //Indica que tipo de objeto es y sus propiedades posibles
+
+```
+Object.getPrototypeof(`Hola mundo`) //Devuelve que es un objeto de tipo String
+```
+
+### .prototype
+Se puede usar .prototype para cambiarle las propiedades a todos los moldes(prototipos) del tipo del objeto dado, en este caso String
+String.prototype.length2 = `5`  
+
+`Hola mundo`.length2 //Devuelve `5`
