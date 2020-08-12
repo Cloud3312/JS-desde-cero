@@ -843,7 +843,7 @@ Otra forma de llamar a las propiedades es con:
 perro.[`nombre`]
 ```
 ### Operadores, quitar y agregar propiedades
-#### delete
+#### propiedad delete
 Borra una propiedad del objeto
 ```
 delete perro.edad
@@ -860,6 +860,27 @@ Tambien se puede hacer con corchetes
 ```
 perro.[feliz] = True        
 ```
+
+#### propiedad in 
+Es un operador que devuelve true o false si el objeto tiene esa propiedad.
+Por ejemplo:
+```
+`vacunas` in perro // Devuelve true 
+```
+```
+Se puede recorrer todas las propiedades de perro
+for(let property in perro){
+    console.log(property)
+}       //Devuelve todas las propiedades de perro
+```
+Pero es preferible utilizar .hasOwnProperty(), ya que esta te da solo las propiedades de ese objeto y no del prototipo
+```
+for(let property in perro){
+    if(perro.hasOwnProperty(property)){
+    console.log(property)
+    }
+}  
+```
 ## Prototipos y cadena de prototipos
 Una cadena de prototipos es un molde del cual se crea un objeto, que a su vez puede tener otro molde y este otro molde.
 
@@ -874,3 +895,21 @@ Se puede usar .prototype para cambiarle las propiedades a todos los moldes(proto
 String.prototype.length2 = `5`  
 
 `Hola mundo`.length2 //Devuelve `5`
+
+## Mutabilidad 
+Un dato es inmutable cuando es primitivo, por ejemplo cuando le damos un valor a una variable, para que esta cambie, hay que pasarle la variable transformada y almacenarla en otra, ya que la principal no cambiara.  
+Los objetos son MUTABLES, ya que pueden ser transformados 
+```
+let otroPerro = perro
+otroPerro.patas = 4
+```
+En este caso se le agrega la propiedad al perro original y al otroPerro.
+Esto sucede ya que los objetos son asignados por referencia, mientras que las inmutables son asignados por valor.Ya que estos ultimos no estan encadenados entre si (es decir que si uno cambia, cambia el otro).Mientras que los objetos y arrays si estan encadenados.
+Para crear un objeto que no este `encadenado` se debe hacer lo siguiente:
+```
+let perro2 Object.assign({}, perro)    //Las llaves son para indicarle que es un objeto vacio, 
+                                       //aunque tambien se le puede asignar un objeto ya
+                                       //existente, y el segundo parametro es para decirle el tipo de objeto que quiero hacer 
+perro2.orejas = `largas`    //Ahora se le agrega SOLO a perro2 la propiedad orejas, y al resto no                                       
+```
+
