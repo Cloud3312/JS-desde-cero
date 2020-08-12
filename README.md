@@ -912,4 +912,8 @@ let perro2 Object.assign({}, perro)    //Las llaves son para indicarle que es un
                                        //existente, y el segundo parametro es para decirle el tipo de objeto que quiero hacer 
 perro2.orejas = `largas`    //Ahora se le agrega SOLO a perro2 la propiedad orejas, y al resto no                                       
 ```
-
+Dentro de los corchetes puede ir otro objeto, por ejemplo:  
+```
+let mascota = {nariz: 'blanca', peso : '38'}
+let perro2 Object.assign({mascota}, perro) 
+```
