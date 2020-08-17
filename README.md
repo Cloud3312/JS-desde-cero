@@ -925,3 +925,37 @@ Devuelve los nombres de las propiedades del objeto.Pero devuelve tambien las pro
 ### for of 
 No recorre un objeto, porque un objeto no tiene indices(no es iterable)
 ### Object.entries()
+Devuelve como arrays cada una de las entradas del objeto(propiedad, valor)
+```
+let perro = {
+    nombre: `Rodolfo`,
+    edad: 3,
+    color: `Negro`,
+    sexo: `Macho`,
+}
+Object.entries(perro)
+//Devuelve
+0: Array [ "nombre", "Rodolfo" ]
+1: Array [ "edad", 3 ]
+2: Array [ "color", "Negro" ]
+3: Array [ "sexo", "Macho" ]
+length: 4
+```
+### Object.keys()
+Te devuelve las propiedades del objeto en forma de objeto, es parecido a un array pero no lo es.Es un objeto ya que tiene el indice y al lado la propiedad
+```
+0: "nombre"
+1: "edad"
+2: "color"
+3: "sexo"
+length: 4
+```
+### Object.values()
+Devuelve los valores del objeto dado(indice,valor)
+```
+0: "Rodolfo"
+1: 3
+2: "Negro"
+3: "Macho"
+length: 4
+```
