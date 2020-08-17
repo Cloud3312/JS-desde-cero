@@ -917,3 +917,11 @@ Dentro de los corchetes puede ir otro objeto, por ejemplo:
 let mascota = {nariz: 'blanca', peso : '38'}
 let perro2 Object.assign({mascota}, perro) 
 ```
+
+## Recorrer un objeto
+### for in 
+Devuelve los nombres de las propiedades del objeto.Pero devuelve tambien las propiedades en la cadena de prototipos, es decir del 
+"objeto molde"
+### for of 
+No recorre un objeto, porque un objeto no tiene indices(no es iterable)
+### Object.entries()
